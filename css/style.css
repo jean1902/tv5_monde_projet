@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font: 23px;
+  background-color: var(--color_body);
+}
+:root {
+  --color_body: #13132c;
+  --color_text_white: white;
+  --color_link: rgb(74, 74, 74);
+  --color_btn: #4a4a4a;
+  --color_green_btn: #00b2a9;
+  --color_footer: #0c0c1d;
+}
+
+/* ----header fixe */
+.container_prepend {
+  position: absolute;
+}
+.navbar {
+  /* background-color: #13132c; */
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px 5px 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+}
+.carousel_section3 {
+  position: relative;
+  display: flex;
+  column-gap: 10px;
+}
+.logo_navbar {
+  height: 24px;
+}
+.click_box {
+  position: absolute;
+  top: 39px;
+  left: 39px;
+  background-color: var(--color_body);
+  padding: 18px;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+  border-bottom-left-radius: 11px;
+  display: none;
+  z-index: 20000;
+ 
+}
+.click_box li {
+  list-style-type: none;
+  padding: 2px;
+}
+.click_box li a:hover{
+  color: #00B2A9;
+}
+.click_box li a {
+  text-decoration: none;
+  color: var(--color_text_white);
+  text-transform: capitalize;
+  font-family: Shape;
+}
+.main_logo {
+  height: 51px;
+}
+.site_logo_right {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+}
+.icon_menu,
+.site_logo_right {
+  display: flex;
+  align-items: center;
+}
+.retour {
+  margin-top: 58px;
+  padding: 5px 0 5px 25px;
+  display: none;
+}
+.retour span {
+  font-weight: bold;
+  font-size: 25px;
+  color: var(--color_text_white);
+}
+.retour a {
+  text-decoration: none;
+}
+.icon_back_left {
+  height: 39px;
+}
+.container_body_page2 {
+  padding: 5px 16px 5px 31px;
+  margin-bottom: 30px;
+}
+.click_box.active{
+  display: block;
+}
+
+/* --- caroussel --- */
+
+img {
+  vertical-align: middle;
+}
+.background_image {
+  position: absolute;
+  z-index: 5000;
+  background-image: linear-gradient(1.5708rad, rgb(16, 18, 45), transparent);
+  height: 396px;
+  width: 50%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  margin: auto;
+  height: 396px;
+}
+.circle_caroussel {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -71%);
+  top: 58%;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 27%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: var(--color_text_white);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index:5000;
+}
+.mySlides img {
+  height: 396px;
+  object-fit: fill;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%; 
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color:#45454c;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+/* ----section ---- */
+
+.try_again {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 27px;
+}
+.try_again span,
+a {
+  font-size: 24px;
+}
+.try_again span {
+  color: var(--color_text_white);
+}
+.try_again a {
+  color: var(--color_btn);
+  text-decoration: none;
+}
+.btn_try_again {
+  color: var(--color_green_btn);
+  font-size: 14px;
+  color: var(--color_text_white);
+  text-decoration: none;
+  background-color: var(--color_green_btn);
+  display: inline-block;
+  padding: 6px 28px;
+  border-radius: 8px;
+}
+.container_img_section2 .img_try_again img {
+  display: inline-block;
+  height: 288px;
+  border-radius: 6px;
+}
+.carousel_section3 {
+  margin-bottom: 45px;
+}
+.arrow_left_section3 {
+  position: ab;
+}
+
+.img_card_carousel {
+  height: 180px;
+  border-radius: 14px;
+}
+
+/* caroussel2 */
+
+main {
+  width: 100%;
+  height: 840px;
+  /*background: red;*/
+  margin: 10px auto;
+  position: relative;
+  padding: 5px 0;
+}
+main .text {
+  padding: 10px;
+  text-align: center;
+  /*font-size: 30px;*/
+  color: #554;
+}
+.text h1 {
+  font-size: 50px;
+}
+.text p {
+  width: 60%;
+  padding: 5px;
+  margin: auto;
+  line-height: 30px;
+}
+
+.arrow_carousel{
+     
+    margin: 0 5px;
+    cursor: pointer;
+    color: white;
+     width: 30px;
+    height: 30px;
+    display: inline-block;
+    line-height: 19px;
+    text-align: center;
+    border-radius: 3px;
+    z-index: 2000;
+    font-size: 40px;
+}
+  .left_arrow{
+    position: absolute;
+    left: 20px;
+    font-size: 100px;
+   
+  }
+.right_arrow{
+    position: absolute;
+    right: 20px;
+    font-size: 100px;
+   
+}
+
+
+section {
+  width: 100%;
+  height: 300px;
+  /* background: red; */
+  margin: auto;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  margin-top: -91px;
+  margin-bottom: 30px;
+}
+section::-webkit-scrollbar {
+  display: none;
+}
+section .product {
+  min-width: 17%;
+  height: 66%;
+  background: whitesmoke;
+  margin: 0 20px 0 0;
+  border-radius: 20px;
+  position: relative;
+  left: 0;
+  transition: 0.5s;
+}
+.container_product{
+  display: flex;
+}
+.container_product2{
+  display: flex;
+}
+.img_card{
+  height: 198px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* ---footer --- */
+.footer_link {
+  text-decoration: none;
+  color: var(--color_text_white);
+  font-size: 13px;
+  display: block;
+  padding: 5px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.titlelink_footer {
+  text-decoration: none;
+  color: var(--color_text_white);
+  font-weight: bold;
+  font-size: 17px;
+}
+footer .container_body_footer {
+  display: flex;
+  width: 929px;
+  margin: 0px auto;
+  padding-bottom: 25px;
+  padding-top: 32px;
+}
+.footer_case {
+  flex: 1;
+}
+footer {
+  background-color: var(--color_footer);
+}
